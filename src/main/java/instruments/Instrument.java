@@ -1,11 +1,12 @@
 package instruments;
 
 import behaviors.IPlay;
+import behaviors.ISell;
 import instruments.properties.Colour;
 import instruments.properties.Material;
 import instruments.properties.Type;
 
-public abstract class Instrument implements IPlay {
+public abstract class Instrument implements IPlay, ISell {
 
     private double costPrice;
     private double sellPrice;
@@ -39,5 +40,9 @@ public abstract class Instrument implements IPlay {
 
     public Type getType() {
         return type;
+    }
+
+    public double calculateMarkup(){
+        return getSellPrice() - getCostPrice();
     }
 }
