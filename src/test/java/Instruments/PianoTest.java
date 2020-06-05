@@ -1,6 +1,5 @@
 package Instruments;
 
-import instruments.Guitar;
 import instruments.Piano;
 import instruments.properties.Colour;
 import instruments.properties.Material;
