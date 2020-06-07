@@ -22,7 +22,7 @@ public abstract class Accessory implements ISell {
         return this.sellPrice;
     }
 
-    public String getDescription() {
+    public String getName() {
         return this.name;
     }
 

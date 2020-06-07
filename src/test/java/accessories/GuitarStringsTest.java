@@ -29,4 +29,9 @@ public class GuitarStringsTest {
         assertEquals(10.00, guitarStrings.calculateMarkup(), 0.01);
     }
 
+    @Test
+    public void hasName(){
+        assertEquals("Fender pro guitar Strings", guitarStrings.getName());
+    }
+
 }
