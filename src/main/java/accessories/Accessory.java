@@ -2,29 +2,31 @@ package accessories;
 
 import behaviors.ISell;
 
-import java.lang.ref.SoftReference;
-
 public abstract class Accessory implements ISell {
 
     private double costPrice;
     private double sellPrice;
-    private String description;
+    private String name;
 
     public Accessory(double costPrice, double sellPrice, String name) {
         this.costPrice = costPrice;
         this.sellPrice = sellPrice;
-        this.description = name;
+        this.name = name;
     }
 
     public double getCostPrice() {
-        return costPrice;
+        return this.costPrice;
     }
 
     public double getSellPrice() {
-        return sellPrice;
+        return this.sellPrice;
     }
 
     public String getDescription() {
-        return description;
+        return this.name;
+    }
+
+    public double calculateMarkup(){
+        return this.sellPrice - this.costPrice;
     }
 }
